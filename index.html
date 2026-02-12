@@ -9,33 +9,30 @@
             background: linear-gradient(to bottom, #ffcccc, #ff99cc);
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 5vh 5vw; /* Sử dụng vh và vw để responsive */
+            padding: 50px;
             color: #ff1493;
-            margin: 0;
         }
         .message {
-            font-size: 2em; /* Sử dụng em để scale với font base */
-            margin-bottom: 2vh;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
         .heart {
             position: relative;
-            width: 20vw; /* Sử dụng vw để scale với width màn hình */
-            height: 18vw; /* Giữ tỷ lệ */
+            width: 200px;
+            height: 180px;
             margin: 0 auto;
             animation: sparkle 1.5s infinite;
-            min-width: 150px; /* Đảm bảo không quá nhỏ trên mobile */
-            min-height: 135px;
         }
         .heart:before,
         .heart:after {
             position: absolute;
             content: "";
-            left: 10vw; /* Điều chỉnh theo width */
+            left: 100px;
             top: 0;
-            width: 10vw;
-            height: 16vw;
+            width: 100px;
+            height: 160px;
             background: #ff69b4;
-            border-radius: 10vw 10vw 0 0;
+            border-radius: 100px 100px 0 0;
             transform: rotate(-45deg);
             transform-origin: 0 100%;
         }
@@ -49,55 +46,13 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 1.5em; /* Responsive với em */
+            font-size: 20px;
             color: white;
             font-weight: bold;
         }
         @keyframes sparkle {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.7; transform: scale(1.05); }
-        }
-        /* Media queries cho mobile */
-        @media (max-width: 768px) {
-            .message {
-                font-size: 1.5em;
-            }
-            .heart {
-                width: 30vw;
-                height: 27vw;
-                min-width: 120px;
-                min-height: 108px;
-            }
-            .heart:before,
-            .heart:after {
-                left: 15vw;
-                width: 15vw;
-                height: 24vw;
-                border-radius: 15vw 15vw 0 0;
-            }
-            .love-text {
-                font-size: 1.2em;
-            }
-        }
-        /* Media queries cho tablet */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .message {
-                font-size: 2.2em;
-            }
-            .heart {
-                width: 25vw;
-                height: 22.5vw;
-            }
-            .heart:before,
-            .heart:after {
-                left: 12.5vw;
-                width: 12.5vw;
-                height: 20vw;
-                border-radius: 12.5vw 12.5vw 0 0;
-            }
-            .love-text {
-                font-size: 1.8em;
-            }
         }
     </style>
 </head>
